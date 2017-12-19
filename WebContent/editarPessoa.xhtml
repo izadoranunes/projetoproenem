@@ -1,0 +1,53 @@
+<ui:composition template="/WEB-INF/templates/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Atividade</title>
+	</h:head>
+	<ui:define name="corpo-da-pagina">
+		<br />
+		<center>
+			<p:outputLabel id="conteudo"
+				style="color: #DF0101; font-weight:bold; font-size: 30px"
+				value="Edição de cadastro:" />
+
+			<br />
+			<br />	
+			<h:form style="background-color: #cc0000; width: 500px;">
+				<br />
+				
+				<p:messages id="messages" />
+				<p:panelGrid columns="1">
+
+					<h:inputHidden value="#{alunoBean.aluno.alunoid}" />
+
+					<div align="center">
+						<h:panelGrid columns="2">
+							
+
+							<h:outputLabel value="Email" for="email" />
+							<h:inputText id="email" value="#{alunoBean.aluno.email}" />
+
+							<h:outputLabel value="Endereço" for="endereco" />
+							<h:inputText id="endereco" value="#{alunoBean.aluno.endereco}" />
+
+
+							<h:outputLabel value="Nome" for="nome" />
+							<h:inputText id="nome" value="#{alunoBean.aluno.nome}" />
+
+							<h:outputLabel value="Senha" for="senha" />
+							<h:inputText id="senha" value="#{alunoBean.aluno.senha}" />
+						</h:panelGrid>
+						<h:commandButton value="Confirmar" action="#{alunoBean.update}" />
+					</div>
+
+				</p:panelGrid>
+			</h:form>
+		</center>
+	</ui:define>
+</ui:composition>

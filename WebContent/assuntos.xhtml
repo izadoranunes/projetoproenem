@@ -1,0 +1,219 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+   xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:f="http://java.sun.com/jsf/core"
+         xmlns:ui="http://java.sun.com/jsf/facelets"
+         xmlns:p="http://primefaces.org/ui">
+
+	
+	<ui:define name="corpo-da-pagina">
+		<p:panel id="basic" header="O que estudar?" style="margin-bottom: 30px; margin-top: 30px;" >
+        	<h:panelGrid columns="2" cellpadding="10">
+            	<p:graphicImage url="IMG/OqueCai.png" style="width: 300px;"/>
+            	<h:outputText
+                value="Muitos alunos na hora de estudar para o ENEM e/ou outros vestibulares se deparam com a seguinte pergunta: 
+                são tantos conteudos, o que eu devo realmente estudar? Bem, sorte a sua que estamos aqui para lhe ajudar!
+                Separamos uma lista de conteudos que mais são combrados no ENEM e vamos te dar aquele empurrãozinho
+                rumo a aprovação."/>
+        	</h:panelGrid>
+    	</p:panel>
+    	
+	<h:form id="form">
+		
+	    <h1 style="margin-top:30px; color: #DF0101;">Conteudos de Ciências Humanas e suas Tecnologias</h1>
+	    <p:tabView>
+	        <p:tab title="História">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/historia.jpg" style="width: 400px;"/>
+	                <ul> 
+	                <li>Brasil Colonia</li> 
+	                <li>Escravidão</li> 
+	                <li>Brasil República</li> 
+	                <li>Era Vargas</li> 
+	                <li>Ditadura Militar</li> 
+	                <li>Revolução Industrial</li> 
+	                <li>Liberalismo</li> 
+	                <li>I e II Guerra Mundial</li> 
+	                <li>Nazismo/Fascismo</li> 
+	                <li>Guerra Fria</li> 
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>
+	        
+	         <p:tab title="Geografia">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/geografia.png" />
+	                <ul> 
+	                <li>Agricultura</li> 
+	                <li>Desenvolvimento Social</li> 
+	                <li>Contrastes Sociais</li> 
+	                <li>Impactos no Meio Ambiente</li> 
+	                <li>Geopolítica Mundial</li> 
+	                <li>Planos Econômicos</li> 
+	                <li>Migrações</li>  
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>
+	        
+	         <p:tab title="Filosofia e Sociologia">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/sociologia.jpg" style="width: 400px;" />
+	                <ul> 
+	                <li>Política, Ética e Moral</li> 
+	                <li>Iluminismo</li> 
+	                <li>Existencialismo</li> 
+	                <li>Contratualismo</li> 
+	                <li>Relações de Trabalho</li> 
+	                <li>Marxismo</li> 
+	                <li>Cultura em Massa</li> 
+	                <li>Fé X Razão</li> 
+	                <li>Movimentos Sociais</li> 
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>	        
+		</p:tabView>
+		
+		 <h1 style="margin-top: 30px; color: #DF0101;">Conteudos de Ciências da Natureza e suas Tecnologias</h1>
+	    <p:tabView>
+	        <p:tab title="Química">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/quimica.jpg" style="width: 400px;"/>
+	                <ul> 
+	                <li>Estequiometria</li> 
+	                <li>Termoquímica</li> 
+	                <li>Radioatividade</li> 
+	                <li>Funções Orgânicas</li> 
+	                <li>Funções Inorgânicas</li> 
+	                <li>Oxirredução</li> 
+	                <li>Equilíbrio Químico</li> 
+	                <li>pH</li> 
+	                <li>Soluções</li>
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>
+	        
+	         <p:tab title="Biologia">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/biologia.jpg" style="width: 400px;" />
+	                <ul> 
+	                <li>Genética</li> 
+	                <li>Citologia</li> 
+	                <li>Evolução</li> 
+	                <li>Ecologia e Sustentabilidade</li> 
+	                <li>Aprimoramento Genético</li> 
+	                <li>Fisiologia Humana</li> 
+	                <li>Impactos Ambientais</li>  
+	                <li>Doenças e Vetores</li>
+	                <li>Vacina vs. Soro</li>
+	                <li>Ciclos do Carbono e Oxigênio</li>
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>
+	        
+	         <p:tab title="Física">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/fisica.jpg" style="width: 400px; height: 400px;" />
+	                <ul> 
+	                <li>Mecânica</li> 
+	                <li>Eletricidade</li> 
+	                <li>Energia</li> 
+	                <li>Ondas</li> 
+	                <li>Óptica</li> 
+	                <li>Acústica</li> 
+	                <li>Termofísica</li> 
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>	        
+		</p:tabView>
+		
+		<h1 style="margin-top: 30px; color: #DF0101;">Conteudos de Linguagens, Códigos e suas Tecnologias</h1>
+	    <p:tabView>
+	        <p:tab title="Língua Portuguesa">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/portugues.png" style="width: 400px; height: 290px;"/>
+	                <ul> 
+	                <li>Gêneros Textuais</li> 
+	                <li>Variação Linguística</li> 
+	                <li>Interpretação de textos verbais e não verbais</li> 
+	                <li>Construção do sentido (Semântica)</li> 
+	                <li>Funções da Linguagem</li> 
+	                <li>Figuras de Linguagem</li> 
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>
+	        
+	         <p:tab title="Literatura">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/literatura.jpg" />
+	                <ul> 
+	                <li>Quinhentismo</li> 
+	                <li>Barroco</li> 
+	                <li>Realismo/Naturalismo</li> 
+	                <li>Poesia Concreta</li> 
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>
+	        
+	         <p:tab title="Artes">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/artes.jpg" style="width: 400px; height: 300px;"	/>
+	                <ul> 
+	                <li>Renascentismo</li> 
+	                <li>Cubismo</li> 
+	                <li>Surrealismo</li> 
+	                <li>Arte Contemporânea</li> 
+	                <li>Teatro</li> 
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>	     
+	       
+	        <p:tab title="Língua Estrangeira">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/linguas.jpg" />
+	                <ul> 
+	                <li>Interpretação de textos verbais e não verbais</li> 
+	                <li>Vocabulário</li> 
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>
+	        
+	        
+	        <p:tab title="Educação Física">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/edfisica.jpg" style="width: 400px; height: 290px;" />
+	                <ul> 
+	                <li>Esportes</li> 
+	                <li>Artes Marciais</li> 
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>	
+	   </p:tabView>   
+	   
+	     <h1 style="margin-top: 30px; color: #DF0101;">Conteudos de Matemática e suas Tecnologias</h1>
+	      <p:tabView> 
+	        <p:tab title="Matemática">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/math.jpg" style="width: 400px; height: 290px;"/>
+	                <ul> 
+	                <li>Razão, Proporção, Regra de Três e Escala</li> 
+	                <li>Porcentagem</li> 
+	                <li>Análise de Gráficos e Tabelas</li> 
+	                <li>Probabilidade</li> 
+	                <li>Estatística</li> 
+	                <li>Análise Combinatória</li>
+	                <li>Análise Combinatória</li>
+	                <li>Funções do 1° e 2° Grau</li> 
+	                <li>Geometria Plana e Espacial</li>
+	                <li>Trigonometria do triângulo retângulo</li>
+	                <li>Progressões Geométricas e Aritméticas</li>
+	                </ul>
+	            </h:panelGrid>
+	        </p:tab>
+	                	        
+		</p:tabView>
+	     
+	 </h:form>
+		
+	
+	</ui:define>
+</ui:composition>

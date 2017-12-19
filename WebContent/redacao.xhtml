@@ -1,0 +1,94 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+   xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:f="http://java.sun.com/jsf/core"
+         xmlns:ui="http://java.sun.com/jsf/facelets"
+         xmlns:p="http://primefaces.org/ui">
+
+	
+<ui:define name="corpo-da-pagina">
+	<h:form>
+		<p:fieldset legend="De olho na redação" style="margin-bottom:20px; margin-top: 30px;">
+        <h:panelGrid columns="2" cellpadding="5"  style="background-color: #cc0000; color: white;">
+            <p:graphicImage url="IMG/reddacao.png" />
+            <h:outputText
+               value="O principal objetivo do projeto Pró-Redação é fazer com que os candidatos que iram fazer 
+               a prova do Enem, se deem bem na hora da produção textual. Entretando, para isso ser possivel é necessario saber 
+              o passo a passo para produzir uma boa dissertação-argumentativa. Aqui você verá os principais passos para, quem sabe, tirar nota 1000!" />
+        </h:panelGrid>
+    	</p:fieldset>
+    	
+    	<br/>
+    	
+    	  <p:tabView dynamic="true" cache="true">
+        <p:tab title="Introdução">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="IMG/intro.png" style= "width: 300px;"/>
+                <h:outputText 
+                	value="Apresente o tema e o recorte que você fará dele. Evite fazer rodeios. É recomendável que
+                	 a tese seja exposta para direcionar a leitura e mostrar sua linha de raciocínio. Lembre-se de 
+                	 que na dissertação seus argumentos devem ser usados para convencer quem estiver lendo."  />
+            </h:panelGrid>
+        </p:tab>
+        
+        <p:tab title="Desenvolvimento">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="IMG/desenvolvimento.jpg"  style= "width: 300px;"/>
+                <h:outputText 
+	                	value="Defenda a sua tese apresentando ideias que a justifiquem, de forma consistente,
+	                	 e apresente seus argumentos. Essa parte é importante, por isso coloque tudo da forma mais 
+	                	 clara possível para que o leitor compreenda seu ponto de vista. Para deixar organizado, 
+	                	 uma dica é reservar um parágrafo para cada argumento, analisando todos os aspectos que 
+	                	 você quer abordar." />
+            </h:panelGrid>
+        </p:tab>
+        
+        <p:tab title="Conclusão">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="IMG/conc.png"  style= "width: 300px;"/>
+                <h:outputText
+                	value="	Retome as ideias expostas na introdução, junto com os principais argumentos que a
+                	 justificam para confirmar a tese e encerrar o debate. Diferente das outras redações, no Enem 
+                	 é nessa parte que você deve propor a solução ao problema, a partir dos pontos já levantados
+                	  durante sua redação." />
+            </h:panelGrid>
+        </p:tab>
+		</p:tabView>
+		
+		<br />
+		<br />
+		
+		  <p:tabView dynamic="true" cache="true">
+        <p:tab title="Regras para se dar bem na redação do ENEM">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="IMG/regras.jpg" style= "width: 330px;"/>
+                <ul>
+                	<li>Ter no mínimo 7 linhas</li>
+                	<li>Ter no máximo 30 linhas</li>
+                	<li>Ter coerencia e coesão;</li>
+				</ul>            
+            </h:panelGrid>
+        </p:tab>
+        
+        <p:tab title="Regras para uma redação nota mil">
+            <h:panelGrid columns="2" cellpadding="5">
+                <p:graphicImage url="IMG/regras2.png"  style= "width: 300px; heigth: 15px;"/>
+                <ul> 
+	               <li>Ter conhecimento sobre o tema</li>
+	               <li>Não fugir do assunto</li> 
+	               <li>Ter conhecimento de mundo</li> 
+	               <li>Possuir conhecimento na lingua portuguesa</li>
+	               <li>Fazer citações</li>
+	               <li>Deixar uma proposta de intervenção.</li>
+            	</ul>
+            </h:panelGrid>
+        </p:tab>
+		</p:tabView>
+    	    	
+    	
+   	
+   	
+   	</h:form>
+</ui:define>
+	
+</ui:composition>		 

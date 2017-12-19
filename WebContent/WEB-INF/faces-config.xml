@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	
+	<managed-bean>
+    <managed-bean-name>alunoBean</managed-bean-name>
+    <managed-bean-class>enity.AlunoBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  
+  <navigation-rule>
+    <from-view-id>/cadastroAluno.xhtml</from-view-id>
+  
+    <navigation-case>
+      <from-action>#{alunoBean.persist}</from-action>
+      <from-outcome>sucesso</from-outcome>
+      <to-view-id>/cadastroAluno.xhtml</to-view-id>
+    </navigation-case>
+  
+    <navigation-case>
+      <from-outcome>editar</from-outcome>
+      <to-view-id>/editarPessoa.xhtml</to-view-id>
+    </navigation-case>
+  
+    <navigation-case>
+      <from-action>#{alunoBean.remove}</from-action>
+      <from-outcome>sucesso</from-outcome>
+      <to-view-id>/cadastroAluno.xhtml</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  
+  <navigation-rule>
+    <from-view-id>/editarPessoa.xhtml</from-view-id>
+  
+    <navigation-case>
+      <from-action>#{alunoBean.update}</from-action>
+      <from-outcome>sucesso</from-outcome>
+      <to-view-id>/cadastroAluno.xhtml</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  
+	<managed-bean>
+    <managed-bean-name>alunoMsgBean</managed-bean-name>
+    <managed-bean-class>br.com.AlunoMsgBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  
+  <navigation-rule>
+    <from-view-id>/cadastroAlunoMsg.xhtml</from-view-id>
+  
+    <navigation-case>
+      <from-action>#{alunoMsgBean.persist}</from-action>
+      <from-outcome>sucesso</from-outcome>
+      <to-view-id>/cadastroAlunoMsg.xhtml</to-view-id>
+    </navigation-case>
+  
+    <navigation-case>
+      <from-outcome>editar</from-outcome>
+      <to-view-id>/contato.xhtml</to-view-id>
+    </navigation-case>
+  
+    <navigation-case>
+      <from-action>#{alunoMsgBean.remove}</from-action>
+      <from-outcome>sucesso</from-outcome>
+      <to-view-id>/cadastroAlunoMsg.xhtml</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  
+  <navigation-rule>
+    <from-view-id>/contato.xhtml</from-view-id>
+  
+    <navigation-case>
+      <from-action>#{alunoMsgBean.update}</from-action>
+      <from-outcome>sucesso</from-outcome>
+      <to-view-id>/cadastroAlunoMsg.xhtml</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+ 
+</faces-config>

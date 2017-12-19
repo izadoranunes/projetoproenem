@@ -1,0 +1,120 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+   xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:f="http://java.sun.com/jsf/core"
+         xmlns:ui="http://java.sun.com/jsf/facelets"
+         xmlns:p="http://primefaces.org/ui">
+  <h:head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Atividade</title>
+  </h:head>
+  <ui:define name="corpo-da-pagina">
+  <br/>
+  <center><h1 style="font-weight:bold">Cadastro Pessoa</h1></center>
+    <h:form>
+      
+          <p:messages id="messages" showDetail="true" autoUpdate="true"
+				closable="true" />
+           
+        <div align="center">
+                     <p:panelGrid columns="2">
+                        
+  
+                        <h:outputLabel value="Email" for="email" />
+                        <h:inputText id="email" requiredMessage="Erro no email"
+                         value="#{alunoBean.aluno.email}" required="true" >
+                         </h:inputText>
+                        
+                         <h:outputLabel value="Endereço" for="endereco" />
+                        <h:inputText id="endereco" requiredMessage="Erro no endereço"
+                        value="#{alunoBean.aluno.endereco}" required="true" >
+                        </h:inputText>
+                    
+                        
+                         <h:outputLabel value="Nome" for="nome" />
+                        <h:inputText id="nome" requiredMessage="Erro no Nome"
+                        value="#{alunoBean.aluno.nome}" required="true" >
+                        </h:inputText>
+  
+   							<h:outputLabel value="Senha" for="senha" />
+                        <h:inputSecret id="senha" requiredMessage="Erro no Senha"
+                         value="#{alunoBean.aluno.senha}" required="true">
+                         </h:inputSecret>
+                       
+                   <h:commandButton value="Cadastrar" class="btn-primary btn-lg">
+						<f:ajax event="click" execute="@form"
+							listener="#{alunoBean.persist}" render="alunos" />
+					</h:commandButton>
+					
+					
+                      </p:panelGrid>
+               </div>
+  
+                <br />
+                <hr width="50%"/>
+                <br />
+  				
+  				</h:form>
+  				
+                <div align="center">
+                <p:panelGrid columns="2" id="alunos">
+                <h:form>
+                    <h:dataTable value="#{alunoBean.list}" var="_aluno" rendered="#{alunoBean.list != null}" width="50%" border="1">
+                       
+  
+  						 <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Email" />
+                            </f:facet>
+                            <h:outputText value="#{_aluno.email}" />
+                        </h:column>
+  
+ 						 <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Endereço" />
+                            </f:facet>
+                            <h:outputText value="#{_aluno.endereco}" />
+                        </h:column>
+  
+  
+                        
+  
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Nome" />
+                            </f:facet>
+                            <h:outputText value="#{_aluno.nome}" />
+                        </h:column>
+                        
+                        
+                       
+                       
+  
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Opções" />
+                            </f:facet>
+  
+                            <h:commandLink value="Editar/" action="editar">
+                                <f:setPropertyActionListener value="#{_aluno.alunoid}" target="#{alunoBean.id}"/>
+                            </h:commandLink>
+  
+                            <h:commandLink value="Remover" action="#{alunoBean.remove}">
+                                <f:setPropertyActionListener value="#{_aluno.alunoid}" target="#{alunoBean.id}"/>
+                            </h:commandLink>
+                        </h:column>
+                    </h:dataTable>
+                    </h:form>
+                    </p:panelGrid>
+                </div>
+       
+       
+ <h:form enctype="multipart/form-data">
+            <p:fileUpload fileUploadListener="#{fileUploadMB.doUpload}"
+                          showButtons="false" label="Procurar..." auto="true"/>
+        </h:form>       
+        <p:messages  severity="info" escape="false" showDetail="true"
+                 autoUpdate="true" closable="true"/>
+  
+ </ui:define>
+ </ui:composition>

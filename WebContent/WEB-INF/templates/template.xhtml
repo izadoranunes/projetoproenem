@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ProEnem</title>
+	<link rel="shortcut icon" href="IMG/icone.png" />
+
+	<style type="text/css">
+.ui-steps .ui-steps-item {
+	width: 15%;
+}
+
+.ui-state-highlight {
+	text-shadow: none !important;
+}
+
+.ui-steps.custom {
+	margin-bottom: 30px;
+}
+
+.ui-steps.custom .ui-steps-item .ui-menuitem-link {
+	height: 10px;
+	padding: 0 1em;
+}
+
+.ui-steps.custom .ui-steps-item .ui-steps-number {
+	background-color: #DF0101;
+	color: #FFFFFF;
+	display: inline-block;
+	width: 30px;
+	border-radius: 20px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+.ui-steps.custom .ui-steps-item.ui-state-highlight .ui-steps-title {
+	color: #A9F5F2;
+}
+</style>
+</h:head>
+<h:body
+	style="background-image: url(/ProjetoProEnem/IMG/background.jpg);">
+	<div id="header" style="height: 30%;">
+		<img src="IMG/logo.png"
+			style="width: 400px; margin-left: 10%; margin-top: 20px;" />
+	</div>
+	<style>
+body {
+	background-image: url("#{'imagens2/3.png'}");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+</style>
+
+
+
+	<h:form>
+		<p:tabMenu activeIndex="#{param.i}"
+			style="margin-top: 50px; margin-left: 100px; width: 1100px;">
+			<p:menuitem value="Home" url="home.xhtml" icon="ui-icon-star">
+				<f:param name="i" value="0" />
+			</p:menuitem>
+			<p:menuitem value="Assuntos" url="assuntos.xhtml"
+				icon="ui-icon-document">
+				<f:param name="i" value="1" />
+			</p:menuitem>
+			<p:menuitem value="Disciplinas" url="disciplinas.xhtml"
+				icon="ui-icon-search">
+				<f:param name="i" value="2" />
+			</p:menuitem>
+			<p:menuitem value="Redacao" url="redacao.xhtml" icon="ui-icon-search">
+				<f:param name="i" value="3" />
+			</p:menuitem>
+			<p:menuitem value="Contato" url="contato.xhtml" icon="ui-icon-person">
+				<f:param name="i" value="5" />
+			</p:menuitem>
+			<p:menuitem value="Cadastrar Mensagem" url="cadastroAlunoMsg.xhtml"
+				icon="ui-icon-person">
+				<f:param name="i" value="6" />
+			</p:menuitem>
+			<p:menuitem value="Edição" url="editarPessoa.xhtml"
+				icon="ui-icon-search">
+				<f:param name="i" value="7" />
+			</p:menuitem>
+			<p:menuitem value="Cadastrar" url="cadastroAluno.xhtml"
+				icon="ui-icon-person">
+				<f:param name="i" value="8" />
+			</p:menuitem>
+
+
+		</p:tabMenu>
+	</h:form>
+
+
+
+	<h:form>
+
+	</h:form>
+
+	<ui:insert name="corpo-da-pagina">
+	</ui:insert>
+
+
+	<br />
+	<br />
+
+	<div id="footer"
+		style="background-color: #cc0000; height: 200px; margin-top: 25px; width: 100%; color: white; text-align: center;">
+		<br />
+		<hr />
+		<h4 style="margin-top: 20px;">&copy; 2017. Desenvolvido por
+			estudantes do IFRN.</h4>
+		<img src="IMG/sociais.png" alt="Facebook" style="width: 400px;" />
+
+	</div>
+</h:body>
+</html>

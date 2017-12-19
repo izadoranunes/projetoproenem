@@ -1,0 +1,63 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+   xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:f="http://java.sun.com/jsf/core"
+         xmlns:ui="http://java.sun.com/jsf/facelets"
+         xmlns:p="http://primefaces.org/ui">
+
+	
+<ui:define name="corpo-da-pagina">
+	<h:form>
+		<p:panel id="basic" header="O que estudar?" style="margin-bottom: 30px; margin-top: 30px;" >
+        	<h:panelGrid columns="2" cellpadding="10">
+            	<p:graphicImage url="IMG/disci.jpg" />
+            	<h:outputText 
+                value="Aqui deixamos para vocês as áreas do conhecimento que são cobradas no enem. Com base nelas
+                vocês poderam estudar os assuntos mais cobrados que está presente na página cai no ENEM"/>
+        	</h:panelGrid>
+    	</p:panel>	
+    	
+    	<p:tabView orientation="left">
+	        <p:tab title="Ciências Humanas e suas Tecnologias">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/humanas.png" style="width: 100%;"/>
+	                <h:outputText
+	                    value="As matérias que compoem a grade de ciências humanas e suas tecnologias são: 
+	                    Historia; Geografia, Filosofia e Sociologia. Você poderá verificar quais os assuntos mais cobrados 
+	                    nessas disciplinas na nossa 4º pagina." />
+	            </h:panelGrid>
+	        </p:tab>
+	        <p:tab title="Ciências da Natureza e suas Tecnologias">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/natureza.png" style="width: 100%;"/>
+	                <h:outputText value="As matérias que compoem a grade de ciências da natureza e suas tecnologias são: 
+	                    Fisica; Biologia e Quimica. Você poderá verificar quais os assuntos mais cobrados 
+	                    nessas disciplinas na nossa 4º pagina." />
+	            </h:panelGrid>
+	        </p:tab>
+	        <p:tab title="Linguagens, Códigos e suas Tecnologias">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/codigos.png" style="width: 100%;"/>
+	                <h:outputText value="As matérias que compoem a grade de Linguagens, códigos e suas técnologias são: 
+	                    Lingua portuguesa e Literatura, há também a produção textual. Você poderá verificar quais os assuntos mais cobrados 
+	                    nessas disciplinas na nossa 4º pagina."/>
+	            </h:panelGrid>
+	        </p:tab>
+	        <p:tab title="Matemática e suas Tecnologias">
+	            <h:panelGrid columns="2" cellpadding="10">
+	                <p:graphicImage url="IMG/matematica.png" style="width: 100%;"/>
+	                <h:outputText value="A matérias que compoe a grade de Matemática e suas tecnologias é: 
+	                   Apenas matemática, sendo que dentro da mátemática envolve diversos assuntos de calculo.
+	                    Você poderá verificar quais os assuntos mais cobrados 
+	                    nessas disciplinas na nossa 4º pagina." />
+	            </h:panelGrid>
+	        </p:tab>
+    	</p:tabView>
+    	
+    	
+    		
+    </h:form>
+	
+</ui:define>
+
+</ui:composition>

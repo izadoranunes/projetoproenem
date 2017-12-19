@@ -1,0 +1,159 @@
+.divPrincipal {
+	margin-top: 60px;
+}
+
+.form-signin {
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 100px;
+	width: 300px;
+}
+
+.jumbotron-medio {
+	height: 150px;
+	padding: 0px;
+}
+
+.jumbotron-medio h1 {
+	margin-top: 0px;
+	line-height: 150px;
+}
+
+.jumbotron-no-padding {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.centralizado {
+	margin: 0 auto;
+}
+
+.ui-growl {
+    position:absolute;
+    top:60px;
+}
+
+a.linkMenuTopo {
+	color: #9d9d9d;
+	text-decoration: none;
+}
+
+a.linkMenuTopo.ativo {
+	color: #fff !important;
+}
+
+a.linkMenuTopo:HOVER {
+	color: #fff;
+}
+
+.fotoPerfil {
+	width: 24px; 
+	height: 24px;
+}
+
+.fotoInserirComentario {
+	width: 48px; 
+	height: 48px;
+}
+
+.btn-primary{
+	margin-right: 5px;
+}
+
+.post {
+	background-color: #eee;
+	width: 100%;
+	padding: 15px 20px 15px 20px;
+}
+
+.tituloPost {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.fotoUsuario {
+	max-width: 48px;
+	max-height: 48px;
+	margin-right: 10px;
+}
+
+.post .botoesADireita {
+	float: right;
+}
+
+.avaliacaoGeralPost {
+	clear: both;
+	width: 100%;
+	height: 20px;
+	margin-top: 10px;
+}
+
+.post .descricaoPost {
+	margin-top: 10px;
+}
+
+.estatisticasPost {
+	color: #23527c;
+}
+
+.opcoesPost {
+	margin-top: 10px;
+}
+
+.panelOpcaoCurtir {
+	float: left;
+}
+
+.imagemPost{
+	max-height: 256px;
+	max-width: 256px;
+	margin-bottom: 10px;
+}
+
+.videoPost {
+	max-height: 512px;
+	max-width: 512px;
+	margin-bottom: 10px;
+}
+
+.post .painelCodigo {
+/* 	border: 1px groove #eee; */
+/* 	background-color: #f7f7f7; */
+/* 	padding: 15px 20px 15px 20px; */
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.post .areaCodigo {
+	max-height: 60px;
+}
+
+.frameStreaming{
+	width: 100%;
+}
+
+.postComentario {
+	border-bottom: 1px groove #eee;
+}
+
+.CodeMirror {
+  width: 100%; 
+}
+
+.hljs {
+	background-color: transparent !important;
+}
+
+.ui-rating{
+	display: inline;
+}
+
+.divConsole {
+	background-color: #eee;
+	width: 100%;
+	height: 500px;
+	overflow: scroll;
+	text-align: left;
+	margin-top: 20px;
+}
